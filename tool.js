@@ -174,7 +174,7 @@ function cripple_window(_window) {
             let players = world.players.list;
             for (var i = 0; me.active && i < players.length; i++) {
                 let e = players[i];
-                if (e[isYou] || !e.active || !e[objInstances] || isEnemy(e)) { //Removed the !isEmpty(e) and see difference
+                if (e[isYou] || !e.active || !e[objInstances] || !isEnemy(e) || isEnemy(e)) { //Removed the !isEmpty(e) and see difference
                     continue
                 }
                 e.x3 = e.x;
